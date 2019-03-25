@@ -106,4 +106,8 @@ module.exports = app => {
      * Media search API
      */
     app.post('/search-media', (req, res) => handleMediaSearch(req, res));
+
+    app.get('/', (req, res) => {
+        res.status(200).send("Welcome!");
+    });
 }
