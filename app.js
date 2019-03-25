@@ -1,11 +1,18 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
+const cors = require('cors')
 require('dotenv').config();
 
 const port = process.env.PORT;
 const app = express();
+// const corsOptions = {
+//     origin: 'http://localhost',
+//     optionsSuccessStatus: 200
+// }
+
 app.use(bodyParser.json());
+app.use(cors());
 app.use(express.static("public"));
 
 /**
