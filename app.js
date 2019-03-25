@@ -23,7 +23,6 @@ db.once('open', function () {
  */
 require("./routes/apiRoutes")(app);
 
-
 app.listen(port, function () {
     console.log(`App started on port ${port}`);
 });

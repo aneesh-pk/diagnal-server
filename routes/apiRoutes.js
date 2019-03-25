@@ -100,12 +100,12 @@ module.exports = app => {
     /**
      * paginated media fetch API
      */
-    // app.post('/get-media', (req, res) => handleMediaFetch(req, res));
+    app.post('/get-media', (req, res) => handleMediaFetch(req, res));
 
     // /**
     //  * Media search API
     //  */
-    // app.post('/search-media', (req, res) => handleMediaSearch(req, res));
+    app.post('/search-media', (req, res) => handleMediaSearch(req, res));
 
     app.get('/', (req, res) => {
         res.status(200).send("Welcome!");
