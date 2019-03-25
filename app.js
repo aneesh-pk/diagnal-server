@@ -11,12 +11,12 @@ app.use(express.static("public"));
 /**
  * Connect database
  */
-// mongoose.connect(process.env.DB_CONN, { useNewUrlParser: true });
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'mongodb connection error:'));
-// db.once('open', function () {
-//     console.log("mongodb connected");
-// });
+mongoose.connect(process.env.DB_CONN, { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'mongodb connection error:'));
+db.once('open', function () {
+    console.log("mongodb connected");
+});
 
 /**
  * Routes
