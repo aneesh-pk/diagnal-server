@@ -33,7 +33,7 @@ const handleMediaFetch = (req, res) => {
                         }
                     });
                 } else {
-                    throw NOT_FOUND_ERROR;
+                    res.status(200).json(NOT_FOUND_ERROR);
                 }
             }).catch(err => {
                 res.status(500).send(err);
@@ -74,7 +74,7 @@ const handleMediaSearch = (req, res) => {
                     };
                 }
             }).catch(err => {
-                res.status(500).send(NOT_FOUND_ERROR);
+                res.status(200).json(NOT_FOUND_ERROR);
             });
     } catch (err) {
         res.status(500).send(err);
